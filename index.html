@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Toro Movers · Angie study guide</title>
+<link rel="icon" href="https://toromovers.com/logos/toro-lockup-navy.svg" />
+<style>
+  :root { --ink:#0b0b0b; --muted:#5c584f; --line:#e6e1d8; --paper:#f6f4ef; --card:#fff; --accent:#9a3412; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); }
+  button, input, textarea { font-family: "Segoe UI", system-ui, sans-serif; }
+  .login { min-height:100vh; display:grid; place-items:center; padding:24px; background:#0b0b0b; color:#fff; }
+  .panel { width:min(420px,100%); background:#fff; color:var(--ink); border-radius:18px; padding:28px 24px; }
+  .panel img { height:42px; }
+  .panel h1 { font-size:1.6rem; margin:16px 0 6px; }
+  .panel p { color:var(--muted); margin:0 0 16px; font-family:"Segoe UI",system-ui,sans-serif; }
+  label { display:block; font-size:.82rem; margin:12px 0 4px; font-family:"Segoe UI",system-ui,sans-serif; }
+  input, textarea { width:100%; border:1px solid var(--line); border-radius:10px; padding:12px; font-size:1rem; }
+  .go { width:100%; margin-top:16px; background:#0b0b0b; color:#fff; border:0; border-radius:999px; padding:12px; font-weight:700; cursor:pointer; }
+  .err { color:#9a3412; min-height:1.2em; font-family:"Segoe UI",system-ui,sans-serif; font-size:.9rem; }
+  header.top { display:flex; justify-content:space-between; gap:12px; align-items:center; padding:16px 18px; background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; }
+  header.top img { height:36px; }
+  header.top button { background:#fff; border:1px solid var(--line); border-radius:999px; padding:8px 12px; cursor:pointer; }
+  main { max-width:840px; margin:0 auto; padding:18px 14px 48px; }
+  nav { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+  nav a { color:var(--ink); background:#fff; border:1px solid var(--line); text-decoration:none; border-radius:999px; padding:8px 12px; font-family:"Segoe UI",system-ui,sans-serif; font-size:.92rem; }
+  section { background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; margin-bottom:12px; }
+  h2 { margin:0 0 8px; font-size:1.35rem; }
+  .grid { display:grid; gap:8px; }
+  @media (min-width:700px) { .grid { grid-template-columns:1fr 1fr; } }
+  .fact { background:#f6f4ef; border-radius:12px; padding:10px 12px; font-family:"Segoe UI",system-ui,sans-serif; }
+  .fact b { display:block; font-size:.75rem; letter-spacing:.04em; text-transform:uppercase; color:var(--accent); }
+  .say { background:#f6f4ef; border-left:4px solid #0b0b0b; padding:10px 12px; border-radius:8px; margin:8px 0; }
+  .card, button.q { width:100%; text-align:left; border:1px solid var(--line); background:#fff; border-radius:12px; padding:12px; margin-top:8px; cursor:pointer; font-size:1rem; }
+  .card .back { display:none; margin-top:8px; font-weight:700; }
+  .card.open .back { display:block; }
+  button.q.good { background:#eef8f2; border-color:#1f6b45; }
+  button.q.bad { background:#fdf1ec; border-color:#9a3412; }
+  .small { color:var(--muted); font-family:"Segoe UI",system-ui,sans-serif; }
+  #app { display:none; }
+</style>
+</head>
+<body>
+<div class="login" id="gate">
+  <form class="panel" id="form">
+    <img src="https://toromovers.com/logos/toro-lockup-navy.svg" alt="Toro Movers" />
+    <h1>Staff study guide</h1>
+    <p>Orlando local crew. Sign in with your Toro Movers email.</p>
+    <label>Work email</label>
+    <input id="email" type="email" placeholder="name@toromovers.com" required />
+    <label>Password</label>
+    <input id="pass" type="password" required />
+    <button class="go" type="submit">Sign in</button>
+    <p class="err" id="err"></p>
+  </form>
+</div>
+<div id="app">
+  <header class="top">
+    <img src="https://toromovers.com/logos/toro-lockup-navy.svg" alt="Toro Movers" />
+    <button id="out" type="button">Sign out</button>
+  </header>
+  <main>
+    <p class="small" id="who"></p>
+    <nav>
+      <a href="#know">Memorize</a>
+      <a href="#flow">7 steps</a>
+      <a href="#places">Places</a>
+      <a href="#cards">Cards</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#practice">Practice</a>
+    </nav>
+    <section id="know">
+      <h2>Memorize before you pick up</h2>
+      <div class="grid">
+        <div class="fact"><b>Opening</b>Thank you for calling Toro Movers. This is Angie. How can I help you?</div>
+        <div class="fact"><b>Phone</b>(689) 600-2720</div>
+        <div class="fact"><b>Rate</b>$95 per hour, per mover. 2-hour minimum. Confirm with the owner before you quote it.</div>
+        <div class="fact"><b>No extras</b>No hidden fees. No stair fees. No weekend premiums.</div>
+        <div class="fact"><b>Do not promise</b>Never give an exact total on the first call.</div>
+        <div class="fact"><b>Both sides</b>House, apartment, office, or storage for pickup and drop-off.</div>
+      </div>
+    </section>
+    <section id="flow">
+      <h2>The call, in order</h2>
+      <div class="say">1. “Thank you for calling Toro Movers. This is Angie. How can I help you?” Then: “I just need a few details so we can give you a clear quote.”</div>
+      <div class="say">2. “What do you need today? A full move, labor only, packing, or just one or two big items?”</div>
+      <div class="say">3. “Is this a house, an apartment, an office, or a storage unit?” Ask it for where they leave and where they go.</div>
+      <div class="say">4. Pickup and drop-off address, city and zip. Extra stop. Date, flexible or not. Morning or afternoon.</div>
+      <div class="say">5. Packed or not. Piano, safe, treadmill, sectional, fridge, washer and dryer, king bed, glass table. Anything staying, dump, or donation.</div>
+      <div class="say">6. “Our rate is $95 per hour, per mover. We confirm the crew size when we quote, and there is a 2-hour minimum. No hidden fees.” Then name, number, and if text is okay.</div>
+      <div class="say">7. Repeat the move back: service, both places, floors, stairs or elevator, date, bedrooms, packed, phone. “Thank you for calling Toro Movers.”</div>
+    </section>
+    <section id="places">
+      <h2>Questions by place</h2>
+      <div class="say"><b>House.</b> Bedrooms and rooms. One story or two. Stairs inside or at the door. Truck on the driveway, street, or a long walk.</div>
+      <div class="say"><b>Apartment.</b> Floor. Elevator or stairs only. Reserve the elevator. Move-in window. Loading zone. Certificate of insurance. Walk from the truck.</div>
+      <div class="say"><b>Storage.</b> Size: 5x5, 5x10, 10x10, 10x20. Ground floor or upstairs. Loading in, taking out, or both.</div>
+      <div class="say"><b>Office.</b> Desks. Server, copier, or anything heavy. Business hours, after hours, or weekend.</div>
+    </section>
+    <section id="cards">
+      <h2>Flash cards</h2>
+      <p class="small">Tap, answer out loud, then check.</p>
+      <div class="card">What do you say first?<div class="back">Thank you for calling Toro Movers. This is Angie. How can I help you?</div></div>
+      <div class="card">Four kinds of help<div class="back">Full move, labor only, packing, single item.</div></div>
+      <div class="card">Apartment access<div class="back">Floor, elevator or stairs, reservation, move window, loading zone, walk from the truck.</div></div>
+      <div class="card">The rate<div class="back">$95 per hour, per mover. 2-hour minimum. No hidden fees. No exact total on the first call.</div></div>
+    </section>
+    <section id="quiz">
+      <h2>Check yourself</h2>
+      <div id="quizBox"></div>
+      <p id="score"></p>
+    </section>
+    <section id="practice">
+      <h2>Practice call</h2>
+      <p>Customer: “I need to move my 2-bedroom apartment in Kissimmee to a house in Winter Park next Saturday. Third floor, elevator, moves only from 9 to 1.”</p>
+      <textarea id="practice" placeholder="Write your next lines"></textarea>
+      <button class="q" id="showKey" type="button">Show the answer key</button>
+      <div class="say" id="key" hidden>Confirm full move. Pickup is a 3rd-floor apartment with an elevator and a 9 to 1 window. Ask loading zone, insurance certificate, and parking walk. Drop-off is a house: stories, stairs, driveway. Get both addresses, packed or not, heavy items, name, and phone. Say the rate. Do not give a total. Repeat it back.</div>
+    </section>
+  </main>
+</div>
+<script>
+const HASH = "7d5226663555384d82240ad3f95d032f78b5b5e9e8002194779ec88f9fd7aee6";
+async function sha(text) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2,"0")).join("");
+}
+function showApp(email) {
+  document.getElementById("gate").style.display = "none";
+  document.getElementById("app").style.display = "block";
+  document.getElementById("who").textContent = "Signed in as " + email;
+}
+document.getElementById("form").onsubmit = async (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value.trim().toLowerCase();
+  const pass = document.getElementById("pass").value;
+  const okDomain = email.endsWith("@toromovers.com") || email.endsWith("@toromovers.net");
+  if (!okDomain) {
+    document.getElementById("err").textContent = "Use your Toro Movers email.";
+    return;
+  }
+  if (await sha(pass) !== HASH) {
+    document.getElementById("err").textContent = "That password is not right.";
+    return;
+  }
+  sessionStorage.setItem("toroStaff", email);
+  showApp(email);
+};
+document.getElementById("out").onclick = () => {
+  sessionStorage.removeItem("toroStaff");
+  location.reload();
+};
+document.querySelectorAll(".card").forEach(card => card.onclick = () => card.classList.toggle("open"));
+const quiz = [
+  ["When do you say the price?", ["After the details", "As soon as they say hello"], 0],
+  ["Labor only means", ["They already have the truck, POD, or U-Haul", "We bring the truck"], 0],
+  ["The minimum is", ["2 hours", "1 hour"], 0]
+];
+const box = document.getElementById("quizBox");
+let answered = 0, correct = 0;
+quiz.forEach((item, qi) => {
+  const wrap = document.createElement("div");
+  wrap.innerHTML = "<p><b>" + (qi+1) + ". " + item[0] + "</b></p>";
+  item[1].forEach((choice, ci) => {
+    const b = document.createElement("button");
+    b.className = "q"; b.type = "button"; b.textContent = choice;
+    b.onclick = () => {
+      if (wrap.dataset.done) return;
+      wrap.dataset.done = "1"; answered++;
+      wrap.querySelectorAll("button")[item[2]].classList.add("good");
+      if (ci === item[2]) correct++; else b.classList.add("bad");
+      document.getElementById("score").textContent = correct + " of " + answered + " correct";
+    };
+    wrap.appendChild(b);
+  });
+  box.appendChild(wrap);
+});
+document.getElementById("showKey").onclick = () => document.getElementById("key").hidden = false;
+const saved = sessionStorage.getItem("toroStaff");
+if (saved) showApp(saved);
+</script>
+</body>
+</html>
